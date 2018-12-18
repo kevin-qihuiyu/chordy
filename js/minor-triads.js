@@ -1,25 +1,9 @@
 var timer = null;
 var interval_value;
 
-// function start() {
-//     clearInterval(timer);
-//     var input_value = document.getElementById('interval').value;
-//     console.log("Ready...");
-//     var chordN, chordPrev;
-//     timer = setInterval(function(){
-//         do {
-//             chordN = Math.floor(Math.random() * 12);
-//         }
-//         while (chordN === chordPrev)
-//         // console.log(chordN);
-//         displayChord(chordN);
-//         chordPrev = chordN;
-//     }, input_value*1000 )
-// }
-
 
 var chordNames = [
-    'C','F','G','#F','A','D','E','bA','bD','bE','B','bB'
+    'Am','Dm','Em','bEm','Cm','Fm','Gm','#Cm','#Fm','#G','Bm','bBm'
 ]
 var chordPool = [];
 
