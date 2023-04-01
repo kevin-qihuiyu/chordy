@@ -1,23 +1,5 @@
 var timer = null;
 var interval_value;
-
-// function start() {
-//     clearInterval(timer);
-//     var input_value = document.getElementById('interval').value;
-//     console.log("Ready...");
-//     var chordN, chordPrev;
-//     timer = setInterval(function(){
-//         do {
-//             chordN = Math.floor(Math.random() * 12);
-//         }
-//         while (chordN === chordPrev)
-//         // console.log(chordN);
-//         displayChord(chordN);
-//         chordPrev = chordN;
-//     }, input_value*1000 )
-// }
-
-
 var chordNames = [
     'C','F','G','#F','A','D','E','bA','bD','bE','B','bB'
 ]
@@ -80,13 +62,12 @@ function start() {
 function toggleAllSelect(containerId) {
     // All checkbox booleans
     var checks = document.querySelectorAll('#' + containerId + ' input[type="checkbox"]');
-    // lastCheck value is the select/deselect all value
-    var lastCheck = checks[checks.length - 1];
+    var toggleAllCheck = checks[checks.length - 1];
     for(var i =0; i< checks.length;i++) {
         var check = checks[i];
         if(!check.disabled) {
             // Set all checkbox the same status as the last checkbox
-            check.checked = (lastCheck.checked == true) ? true : false;
+            check.checked = toggleAllCheck.checked;
         }
     }
 }
